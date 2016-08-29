@@ -122,7 +122,7 @@ body {
   clear: both;
   width: 79.6747967479%;
   min-height: 35px;
-  margin: -25px 0 0 30.16277%;
+  margin-top: -25px;
   font-size: 1em;
   color: rgb(51, 51, 51);
 }
@@ -157,6 +157,7 @@ body {
   z-index: 3;
   width: 79.190751445%;
   height: 60px;
+  padding-top: 5px;
   background-color: rgb(10, 12, 13);
   font-size: 1em;
   font-weight: 700;
@@ -206,7 +207,7 @@ body {
 .coms-1 {
   clear: both;
   z-index: 24;
-  margin-left: 30.67693%;
+  margin-left: 30.6769281694%;
 }
 
 .coms-10 {
@@ -230,7 +231,7 @@ body {
 .coms-13 {
   clear: both;
   z-index: 188;
-  margin-left: 30.6769281694%;
+  margin-left: 30.67693%;
 }
 
 .coms-14 {
@@ -621,7 +622,7 @@ body {
   z-index: 21;
   width: 32.5396825396%;
   height: 37px;
-  margin: 90px 0 0 0.26068%;
+  margin: 90px 0 0 0.260675273%;
 }
 
 .save-13 {
@@ -638,6 +639,13 @@ body {
   width: 32.5396825396%;
   height: 37px;
   margin: 90px 0 0 0.26068%;
+}
+
+.save-2 {
+  clear: both;
+  margin: -24px 0 0 30.1627670396%;
+  font-family: 'Open Sans';
+  font-weight: 700;
 }
 
 .save-21 {
@@ -669,17 +677,18 @@ body {
   margin-top: 87px;
 }
 
+.save-3 {
+  margin-left: 30.1627670396%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
 .save-33 {
   position: relative;
   z-index: 131;
   width: 32.5396825396%;
   height: 37px;
   margin-top: 63px;
-}
-
-.save-10,
-.save-34 {
-  margin: 5px 0 0 30.16277%;
 }
 
 .save-37 {
@@ -690,14 +699,10 @@ body {
   margin: 63px 0 0 0.26068%;
 }
 
-.save-14,
-.save-18,
-.save-2,
-.save-30,
-.save-38,
-.save-6 {
-  clear: both;
-  margin: -24px 0 0 30.16277%;
+.save-4 {
+  margin-left: 30.1627670396%;
+  font-family: 'Open Sans';
+  font-weight: 300;
 }
 
 .save-41 {
@@ -708,11 +713,6 @@ body {
   margin: 90px 0 0 0.26068%;
 }
 
-.save-42 {
-  clear: both;
-  margin: -28px 0 0 30.16277%;
-}
-
 .save-45 {
   position: relative;
   z-index: 171;
@@ -721,33 +721,12 @@ body {
   margin-top: 87px;
 }
 
-.save-22,
-.save-46 {
-  clear: both;
-  margin: -26px 0 0 30.16277%;
-}
-
-.save-11,
-.save-15,
-.save-19,
-.save-23,
-.save-27,
-.save-3,
-.save-31,
-.save-35,
-.save-39,
-.save-43,
-.save-47,
-.save-7 {
-  margin-left: 30.16277%;
-}
-
 .save-49 {
   position: relative;
   z-index: 185;
   width: 32.5396825396%;
   height: 37px;
-  margin: 90px 0 0 0.260675273%;
+  margin: 90px 0 0 0.26068%;
 }
 
 .save-5 {
@@ -758,17 +737,6 @@ body {
   margin-top: 87px;
 }
 
-.save-50 {
-  clear: both;
-  margin: -24px 0 0 30.1627670396%;
-  font-weight: 400;
-}
-
-.save-51 {
-  margin-left: 30.1627670396%;
-  font-weight: 400;
-}
-
 .save-53 {
   position: relative;
   z-index: 201;
@@ -777,10 +745,10 @@ body {
   margin-top: 87px;
 }
 
+.save-42,
 .save-54 {
   clear: both;
   margin: -28px 0 0 30.16277%;
-  font-weight: Regular;
 }
 
 .save-57 {
@@ -791,15 +759,10 @@ body {
   margin-top: 63px;
 }
 
+.save-10,
+.save-34,
 .save-58 {
   margin: 5px 0 0 30.16277%;
-  font-weight: Regular;
-}
-
-.save-52,
-.save-56,
-.save-60 {
-  font-weight: Regular;
 }
 
 .save-61 {
@@ -818,17 +781,16 @@ body {
   margin: 90px 0 0 0.26068%;
 }
 
+.save-14,
+.save-18,
+.save-30,
+.save-38,
+.save-50,
+.save-6,
 .save-62,
 .save-66 {
   clear: both;
   margin: -24px 0 0 30.16277%;
-  font-weight: 700;
-}
-
-.save-63,
-.save-67 {
-  margin-left: 30.16277%;
-  font-weight: 700;
 }
 
 .save-69 {
@@ -839,23 +801,48 @@ body {
   margin-top: 87px;
 }
 
+.save-22,
+.save-46,
 .save-70 {
   clear: both;
   margin: -26px 0 0 30.16277%;
-  font-weight: Regular;
 }
 
+.save-11,
+.save-12,
+.save-15,
+.save-16,
+.save-19,
+.save-20,
+.save-23,
+.save-24,
+.save-27,
+.save-28,
+.save-31,
+.save-32,
+.save-35,
+.save-36,
+.save-39,
+.save-40,
+.save-43,
+.save-44,
+.save-47,
+.save-48,
+.save-51,
+.save-52,
 .save-55,
+.save-56,
 .save-59,
-.save-71 {
-  margin-left: 30.16277%;
-  font-weight: Regular;
-}
-
+.save-60,
+.save-63,
 .save-64,
+.save-67,
 .save-68,
-.save-72 {
-  font-weight: 700;
+.save-7,
+.save-71,
+.save-72,
+.save-8 {
+  margin-left: 30.16277%;
 }
 
 .save-9 {
@@ -866,7 +853,10 @@ body {
   margin-top: 63px;
 }
 
-.share-1,
+.share-1 {
+  margin-left: 67.4280039721%;
+}
+
 .share-10,
 .share-11,
 .share-13,
@@ -1127,9 +1117,9 @@ body {
   z-index: 196;
   width: 36.9897959183%;
   min-height: 32px;
-  margin: 19px 0 0 7.1428571428%;
+  margin: 19px 0 0 7.14286%;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 700;
   color: rgb(0, 0, 0);
 }
 
@@ -1148,7 +1138,7 @@ body {
   clear: both;
   width: 86.7469879518%;
   min-height: 32px;
-  margin: 6px 0 0 7.2026466836%;
+  margin: 6px 0 0 7.20265%;
   font-size: 0.75em;
   font-weight: 400;
   color: rgb(51, 51, 51);
@@ -1325,15 +1315,15 @@ body {
   white-space: normal;
 }
 
-.text-10 strong,
-.text-7 strong {
+.text-10 strong {
   font-style: inherit;
   font-weight: inherit;
   text-decoration: inherit;
 }
 
 .text-1 strong,
-.text-4 strong {
+.text-4 strong,
+.text-7 strong {
   font-style: inherit;
   font-weight: 400;
   text-decoration: inherit;
@@ -1404,10 +1394,6 @@ body {
   .share .image {
     margin-top: -2370px;
     margin-left: 229.43795%;
-  }
-
-  .share .save {
-    margin-top: -28px;
   }
 
   .container ._button {
@@ -1691,6 +1677,7 @@ body {
   .branch .text-7 {
     z-index: 196;
     width: 27.0026045819%;
+    margin-left: 7.14125%;
   }
 
   .branch .text-8 {
@@ -1704,6 +1691,7 @@ body {
   .branch .text-9 {
     z-index: 197;
     width: 86.7485249561%;
+    margin-left: 7.19752%;
   }
 
   .branch-1 {
@@ -2016,10 +2004,10 @@ body {
 
   .save .save-14,
   .save .save-18,
-  .save .save-2,
   .save .save-26,
   .save .save-30,
   .save .save-38,
+  .save .save-50,
   .save .save-6,
   .save .save-62,
   .save .save-66 {
@@ -2029,6 +2017,26 @@ body {
   .save .save-22,
   .save .save-70 {
     margin-top: -30px;
+  }
+
+  .share .save-12,
+  .share .save-16,
+  .share .save-20,
+  .share .save-24,
+  .share .save-28,
+  .share .save-32,
+  .share .save-36,
+  .share .save-40,
+  .share .save-44,
+  .share .save-48,
+  .share .save-52,
+  .share .save-56,
+  .share .save-60,
+  .share .save-64,
+  .share .save-68,
+  .share .save-72,
+  .share .save-8 {
+    margin-top: -28px;
   }
 
   .branch ._1-2 {
