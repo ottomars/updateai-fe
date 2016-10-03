@@ -1,6 +1,17 @@
 import './index.css';
-import React from 'react';
 
-export default () => (
-  <p className="App">UpdateAI - Hello World</p>
+import FeedSwitcher from '../feed-switcher'
+import Header from '../header'
+import Logo from '../logo'
+import React from 'react'
+
+const App = () => (
+  <div className="App">
+    <Header>
+      <Logo />
+      <FeedSwitcher />
+    </Header>
+  </div>
 )
+
+export default App

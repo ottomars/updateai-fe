@@ -1,0 +1,15 @@
+{
+  "live": [
+    "apple",
+    "google",
+    "drinks-packaging",
+    "tesla"
+  ],
+  "selected": [
+    "apple",
+    "google",
+    "drinks-packaging",
+    "tesla"
+  ],
+  "active": []
+}

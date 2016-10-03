@@ -1,9 +1,25 @@
-import './index.css';
-import App from './components/app';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import 'normalize.css'
+import 'suitcss-base/lib/base.css'
+import './index.css'
+
+import {createStore, applyMiddleware} from 'redux'
+import {Provider} from 'react-redux'
+import App from './components/app'
+import getInitialState from './utils/getInitialState'
+import logger from 'redux-logger'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import reducer from './reducers'
+
+const store = createStore(
+  reducer,
+  getInitialState(),
+  process.env.NODE_ENV !== 'production' && applyMiddleware(logger())
+)
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
-);
+)

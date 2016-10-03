@@ -1,0 +1,13 @@
+.Header {
+  border-bottom: 1px solid #293ca0;
+  height: 80px;
+}
+
+.Header-inner {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1210px;
+}

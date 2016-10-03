@@ -1,0 +1,22 @@
+.FeedSwitcher {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 20px;
+  justify-content: flex-start;;
+}
+
+.FeedSwitcher-button {
+  color: #666;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+.FeedSwitcher-button.is-active {
+  font-weight: 500;
+  color: #293ca0;
+}
