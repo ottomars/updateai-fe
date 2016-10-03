@@ -14,7 +14,7 @@ import reducer from './reducers'
 const store = createStore(
   reducer,
   getInitialState(),
-  process.env.NODE_ENV !== 'production' && applyMiddleware(logger())
+  (process.env.NODE_ENV !== 'production' && applyMiddleware(logger())) || undefined
 )
 
 ReactDOM.render(
