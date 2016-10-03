@@ -1,9 +1,9 @@
-import './index.css';
-import React from 'react';
+import './index.css'
+import React from 'react'
 
 const Header = ({children}) => (
-  <div className="Header">
-    <div className="Header-inner">
+  <div className='Header'>
+    <div className='Header-inner'>
       {children}
     </div>
   </div>

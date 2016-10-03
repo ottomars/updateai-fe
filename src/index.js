@@ -9,7 +9,7 @@ import getInitialState from './utils/getInitialState'
 import logger from 'redux-logger'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import reducer from './reducers'
+import reducer from './state'
 
 const store = createStore(
   reducer,

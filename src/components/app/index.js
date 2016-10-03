@@ -1,4 +1,4 @@
-import './index.css';
+import './index.css'
 
 import FeedSwitcher from '../feed-switcher'
 import Header from '../header'
@@ -6,7 +6,7 @@ import Logo from '../logo'
 import React from 'react'
 
 const App = () => (
-  <div className="App">
+  <div className='App'>
     <Header>
       <Logo />
       <FeedSwitcher />
