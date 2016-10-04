@@ -1,7 +1,11 @@
+// Reducer
+
 export default (state = {}, action = {}) => {
   switch (action.type) {
     default: return state
   }
 }
 
-export const getItems = state => state.items
+// Selectors
+
+export const getLanes = state => state.lanes

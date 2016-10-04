@@ -9,12 +9,13 @@ import getInitialState from './utils/getInitialState'
 import logger from 'redux-logger'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import reducer from './state'
+import rootReducer from './state'
+import thunk from 'redux-thunk'
 
 const store = createStore(
-  reducer,
+  rootReducer,
   getInitialState(),
-  (process.env.NODE_ENV !== 'production' && applyMiddleware(logger())) || undefined
+  applyMiddleware(thunk, logger())
 )
 
 ReactDOM.render(

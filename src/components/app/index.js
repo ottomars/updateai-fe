@@ -1,6 +1,6 @@
 import './index.css'
 
-import FeedSwitcher from '../feed-switcher'
+import FeedNav from '../feed-nav'
 import Header from '../header'
 import Logo from '../logo'
 import React from 'react'
@@ -9,7 +9,7 @@ const App = () => (
   <div className='App'>
     <Header>
       <Logo />
-      <FeedSwitcher />
+      <FeedNav />
     </Header>
   </div>
 )
