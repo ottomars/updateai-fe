@@ -3,13 +3,13 @@
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 300;
   margin-left: 20px;
   text-decoration: none;
 }
 
 
 .FeedNavButton.is-active {
-  font-weight: 200;
+  font-weight: 300;
   color: #f558bf;
 }

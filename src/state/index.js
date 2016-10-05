@@ -1,16 +1,14 @@
 import {combineReducers} from 'redux'
 import feeds from './feeds'
 import items from './items'
-import lanes from './lanes'
 import selectedFeeds from './selectedFeeds'
-import selectedLanes from './selectedLanes'
+import activeFeeds from './activeFeeds'
 
 const rootReducer = combineReducers({
+  activeFeeds,
   feeds,
   items,
-  lanes,
-  selectedFeeds,
-  selectedLanes
+  selectedFeeds
 })
 
 export default rootReducer

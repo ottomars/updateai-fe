@@ -1,17 +1,19 @@
 {
-  "liveFeeds": [
+  "live": [
     "apple",
     "google",
     "drinks-packaging",
     "tesla"
   ],
-  "selectedFeeds": [
+  "selected": [
     "apple",
     "google",
     "drinks-packaging",
     "tesla"
   ],
-  "inLaneFeeds": [
-    "apple"
+  "active": [
+    "apple",
+    "google",
+    "drinks-packaging"
   ]
 }

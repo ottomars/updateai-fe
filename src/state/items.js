@@ -1,7 +1,7 @@
-export default (state = {}, action = {}) => {
-  switch (action.type) {
-    default: return state
-  }
-}
+// Reducer
+
+export default (state = {}) => state
+
+// Selectors
 
 export const getItems = state => state.items

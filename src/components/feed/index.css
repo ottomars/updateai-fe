@@ -1,0 +1,10 @@
+.Feed {
+  width: 380px;
+}
+
+.Feed-title {
+  color: #1f5acc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+}
