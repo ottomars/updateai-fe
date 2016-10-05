@@ -6,7 +6,7 @@ import {getActiveFeedIds, toggleFeedActive} from '../../state/activeFeeds'
 import FeedNavButton from '../feed-nav-button'
 import React from 'react'
 
-const getFeedNavButtonsState = createSelector(
+const getButtons = createSelector(
   getSelectedFeeds,
   getActiveFeedIds,
   (feeds, activeIds) => (feeds.map(({title, id}) => ({
@@ -17,7 +17,7 @@ const getFeedNavButtonsState = createSelector(
 )
 
 const mapStateToProps = (state) => ({
-  buttons: getFeedNavButtonsState(state)
+  buttons: getButtons(state)
 })
 
 const mapDispatchToProps = (dispatch) => ({

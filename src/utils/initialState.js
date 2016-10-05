@@ -2,7 +2,9 @@ import {basename} from 'path'
 import {ITEMS_PER_LANE_PAGE, LIVE_SORTING} from '../constants'
 import {live, selected, active} from '../../data'
 import {normalize, Schema, arrayOf} from 'normalizr'
+import {parse} from 'url'
 import guid from './guid'
+import moment from 'moment'
 
 const mods = require.context('../../data', false, /^(?!.*index\.json$).*\.json$/)
 
@@ -35,11 +37,17 @@ const feedsArray = mods.keys()
 
 /**
  * Go through the items of each feed and give them a
- * random guid too.
+ * random guid and some dynamic values.
  */
 
 feedsArray.forEach(feed => {
-  feed.items = feed.items.map(item => ({id: guid(), ...item}))
+  feed.items = feed.items.map(item => ({
+    ...item,
+    id: guid(),
+    createdAtRel: moment(item.createdAt).fromNow(),
+    hostname: parse(item.uri).hostname,
+    visited: false
+  }))
 })
 
 /**

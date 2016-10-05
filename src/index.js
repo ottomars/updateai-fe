@@ -1,7 +1,6 @@
 import 'normalize.css'
 import 'suitcss-base/lib/base.css'
 import './index.css'
-
 import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import App from './components/app'
@@ -15,7 +14,7 @@ import thunk from 'redux-thunk'
 const store = createStore(
   rootReducer,
   initialState,
-  applyMiddleware(thunk, logger())
+  applyMiddleware(thunk, logger({collapsed: true, duration: true}))
 )
 
 ReactDOM.render(

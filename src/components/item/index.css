@@ -1,0 +1,38 @@
+.Item {
+  background-color: #fff;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: block;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.Item-media {
+  background-position: center;
+  background-size: cover;
+  height: 140px;
+  width: 100%;
+  transition: background-size 2s ease-in;
+}
+
+.Item-text {
+  color: #1f5acc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 20px 10px 5px 10px;
+}
+
+.Item:hover .Item-text {
+  color: #f558bf;
+}
+
+.Item-info {
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 0 10px 20px 10px;
+}

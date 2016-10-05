@@ -1,6 +1,7 @@
 .Header {
   border-bottom: 1px solid #1f5acc;
   height: 80px;
+  margin-bottom: 40px;
 }
 
 .Header-inner {

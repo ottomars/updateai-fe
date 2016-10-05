@@ -1,10 +1,31 @@
 import './index.css'
+import {connect} from 'react-redux'
+import {createSelector} from 'reselect'
+import {getFeeds} from '../../state/feeds'
+import {getItems} from '../../state/items'
+import Items from '../items'
 import React from 'react'
 
-const Feed = ({title}) => (
+const getIdProp = (state, {id}) => id
+
+const getFeedItems = createSelector(
+  getItems,
+  getFeeds,
+  getIdProp,
+  (items, feeds, id) => feeds[id].items.map(id => items[id])
+)
+
+const mapStateToProps = (state, props) => ({
+  items: getFeedItems(state, props)
+})
+
+const Feed = ({title, items}) => (
   <div className='Feed'>
     <p className="Feed-title">{title}</p>
+    <Items items={items} />
   </div>
 )
 
-export default Feed
+export default connect(
+  mapStateToProps
+)(Feed)

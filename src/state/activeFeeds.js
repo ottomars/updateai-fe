@@ -20,9 +20,8 @@ export const activateFeed = id => ({type: 'ACTIVATE_FEED', id})
 
 export const deactivateFeed = id => ({type: 'DEACTIVATE_FEED', id})
 
-export const toggleFeedActive = (id) => (dispatch, getState) => {
-  const {activeFeeds} = getState()
-  if (activeFeeds.includes(id)) {
+export const toggleFeedActive = id => (dispatch, getState) => {
+  if (getState().activeFeeds.includes(id)) {
     dispatch(deactivateFeed(id))
   } else {
     dispatch(activateFeed(id))

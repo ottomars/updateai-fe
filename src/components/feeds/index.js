@@ -4,7 +4,7 @@ import {getActiveFeeds} from '../../state/activeFeeds'
 import Feed from '../feed'
 import React from 'react'
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   feeds: getActiveFeeds(state)
 })
 
@@ -13,6 +13,7 @@ const Feeds = ({feeds}) => (
     {feeds.map(({id, title}) => (
       <Feed
         key={id}
+        id={id}
         title={title}
       />
     ))}
