@@ -1,3 +1,9 @@
 body {
   background-color: #fcfdff;
 }
+
+/* Make Material UI play nicely with normalize.css */
+
+span[type=button] {
+  appearance: none;
+}

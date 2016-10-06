@@ -1,0 +1,10 @@
+.FeedSelector {
+  align-items: center;
+  display: flex;
+  width: 200px;
+}
+
+.FeedSelector-searchIcon {
+  margin-right: 5px;
+  margin-top: 8px;
+}

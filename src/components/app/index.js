@@ -1,7 +1,8 @@
 import './index.css'
 import FeedNav from '../feed-nav'
-import Header from '../header'
 import Feeds from '../feeds'
+import FeedSelector from '../feed-selector'
+import Header from '../header'
 import Logo from '../logo'
 import React from 'react'
 
@@ -10,6 +11,7 @@ const App = () => (
     <Header>
       <Logo />
       <FeedNav />
+      <FeedSelector />
     </Header>
     <Feeds />
   </div>
