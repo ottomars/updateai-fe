@@ -5,9 +5,9 @@ import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import App from './components/app'
 import initialState from './utils/initialState'
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin'
 import logger from 'redux-logger'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import rootReducer from './state'

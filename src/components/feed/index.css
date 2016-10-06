@@ -1,12 +1,3 @@
-.Feed {
-  margin-right: 30px;
-  width: 380px;
-}
-
-.Feed:last-child {
-  margin-right: 0;
-}
-
 .Feed-title {
   color: #1f5acc;
   font-family: 'Roboto', sans-serif;

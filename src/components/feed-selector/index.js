@@ -5,18 +5,17 @@ import {getFeeds} from '../../state/feeds'
 import {getSelectedFeedIds, selectFeed} from '../../state/selectedFeeds'
 import AutoComplete from 'material-ui/AutoComplete'
 import React from 'react'
-import Search from 'material-ui/svg-icons/action/search'
+import SearchIcon from 'material-ui/svg-icons/action/search'
 
 const getDataSource = createSelector(
   getFeeds,
   getSelectedFeedIds,
-  (feeds, selectedFeedIds) => {
-    const dataSource = Object.keys(feeds)
+  (feeds, selectedFeedIds) => (
+    Object.keys(feeds)
       .filter(id => !selectedFeedIds.includes(id))
       .map(id => feeds[id])
       .map(feed => ({text: feed.title, value: feed.id}))
-    return dataSource
-  }
+  )
 )
 
 const mapStateToProps = (state) => ({
@@ -30,7 +29,7 @@ const mapDispatchToProps = (dispatch) => ({
 const FeedSelector = ({dataSource, onNewRequest}) => (
   <div className='FeedSelector'>
     <div className='FeedSelector-searchIcon'>
-      <Search color='#ccc' />
+      <SearchIcon color='#ccc' />
     </div>
     <AutoComplete
       hintText='Search feeds'

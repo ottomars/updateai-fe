@@ -21,7 +21,7 @@ const mapStateToProps = (state, props) => ({
 
 const Feed = ({title, items}) => (
   <div className='Feed'>
-    <p className="Feed-title">{title}</p>
+    <p className='Feed-title'>{title}</p>
     <Items items={items} />
   </div>
 )

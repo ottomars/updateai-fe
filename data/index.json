@@ -1,12 +1,23 @@
 {
   "live": [
+    "amazon",
     "apple",
-    "google",
+    "bitcoin",
+    "blue-origin",
     "drinks-packaging",
-    "tesla"
+    "google",
+    "space-x",
+    "tesla",
+    "vr"
   ],
   "selected": [
-    "apple"
+    "apple",
+    "amazon",
+    "bitcoin",
+    "drinks-packaging",
+    "google",
+    "space-x",
+    "tesla"
   ],
   "active": [
     "apple"
