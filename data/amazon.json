@@ -8,7 +8,12 @@
       "upvotes": 0,
       "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
       "image": "http://www.networkedindia.com/wp-content/uploads/2016/05/tim-cook.jpg",
-      "comments": []
+      "comments": [
+        ["@JosephTryn", "This was expected. See my post on the wiki for details..."],
+        ["@TimPierce", "Do you think they are in trouble? I'm actually quite optimistic."],
+        ["@JosephTryn", "They will get over it. Did you see the news on the new product?"],
+        ["@TimPierce", "Yes. Let's have @AndrewJosh take a look at it"]
+      ]
     },
     {
       "text": "Amazon 1",
