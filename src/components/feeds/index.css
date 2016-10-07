@@ -3,7 +3,7 @@
   max-width: 1200px;
 }
 
-.Feeds-moreThanThreeFeeds {
+.Feeds--wide {
   margin: 0;
   max-width: none;
   overflow-x: scroll;
@@ -16,7 +16,7 @@
   max-width: 1200px;
 }
 
-.Feeds-moreThanThreeFeeds .Feeds-inner {
+.Feeds--wide .Feeds-inner {
   max-width: none;
   flex-wrap: nowrap;
   margin-left: 30px;
@@ -27,7 +27,7 @@
   width: 380px;
 }
 
-.Feeds-moreThanThreeFeeds .Feeds-feed {
+.Feeds--wide .Feeds-feed {
   flex-shrink: 0;
 }
 

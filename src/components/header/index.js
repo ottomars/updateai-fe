@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 })
 
 const Header = ({feeds, children}) => (
-  <div className={cn('Header', {'Header-moreThanThreeFeeds': feeds.length > 3})}>
+  <div className={cn('Header', {'Header--wide': feeds.length > 3})}>
     <div className='Header-inner'>
       {children}
     </div>

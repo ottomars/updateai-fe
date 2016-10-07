@@ -13,13 +13,11 @@
   "selected": [
     "apple",
     "amazon",
-    "bitcoin",
-    "drinks-packaging",
-    "google",
-    "space-x",
-    "tesla"
+    "bitcoin"
   ],
   "active": [
-    "apple"
+    "apple",
+    "amazon",
+    "bitcoin"
   ]
 }

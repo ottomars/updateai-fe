@@ -10,14 +10,11 @@ const mapStateToProps = state => ({
 })
 
 const Feeds = ({feeds}) => (
-  <div className={cn('Feeds', {'Feeds-moreThanThreeFeeds': feeds.length > 3})}>
+  <div className={cn('Feeds', {'Feeds--wide': feeds.length > 3})}>
     <div className='Feeds-inner'>
-      {feeds.map(({id, title}) => (
-        <div key={id} className='Feeds-feed'>
-          <Feed
-            id={id}
-            title={title}
-          />
+      {feeds.map(feed => (
+        <div key={feed.id} className='Feeds-feed'>
+          <Feed {...feed}/>
         </div>
       ))}
     </div>

@@ -18,7 +18,10 @@ injectTapEventPlugin()
 const store = createStore(
   rootReducer,
   initialState,
-  applyMiddleware(thunk, logger({collapsed: true, duration: true}))
+  applyMiddleware(
+    thunk,
+    logger({collapsed: true, duration: true})
+  )
 )
 
 ReactDOM.render(

@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {createSelector} from 'reselect'
 import {getFeeds} from '../../state/feeds'
 import {getItems} from '../../state/items'
+import FeedHeader from '../feed-header'
 import Items from '../items'
 import React from 'react'
 
@@ -19,10 +20,10 @@ const mapStateToProps = (state, props) => ({
   items: getFeedItems(state, props)
 })
 
-const Feed = ({title, items}) => (
+const Feed = feed => (
   <div className='Feed'>
-    <p className='Feed-title'>{title}</p>
-    <Items items={items} />
+    <FeedHeader {...feed}/>
+    <Items items={feed.items} />
   </div>
 )
 
