@@ -2,30 +2,30 @@
   "title": "Apple",
   "items": [
     {
-      "text": "Apple 0",
+      "text": "Just when you thought slide-to-unlock was dead: Samsung owes Apple $120M in patent case",
       "createdAt": "2016-10-03T09:00:00",
       "starred": false,
       "upvotes": 0,
-      "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
-      "image": "http://www.networkedindia.com/wp-content/uploads/2016/05/tim-cook.jpg",
+      "uri": "https://9to5mac.com/2016/10/07/samsung-apple-120-million-court-slide-to-unlock-patent/",
+      "image": "https://9to5mac.files.wordpress.com/2016/09/home-to-unlock.jpg",
       "comments": []
     },
     {
-      "text": "Apple 1 this one has no image",
+      "text": "Apple named world’s most valuable brand for fourth consecutive year",
       "createdAt": "2016-09-03T09:00:00",
-      "starred": false,
+      "starred": true,
       "upvotes": 0,
-      "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
-      "image": "",
+      "uri": "http://www.cultofmac.com/447993/apple-named-worlds-valuable-brand-fourth-consecutive-year/",
+      "image": "https://www.apple.com/jobs/images/content/slider/retail-fifth-avenue/landscape.jpg",
       "comments": []
     },
     {
-      "text": "Apple 2",
+      "text": "Former NSA staffer demonstrates Mac malware that can tap into live webcam and mic feeds",
       "createdAt": "2016-08-03T09:00:00",
-      "starred": false,
+      "starred": true,
       "upvotes": 0,
-      "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
-      "image": "http://www.networkedindia.com/wp-content/uploads/2016/05/tim-cook.jpg",
+      "uri": "https://9to5mac.com/2016/10/06/mac-malware-webcam-microphone/",
+      "image": "https://9to5mac.files.wordpress.com/2016/10/d.png",
       "comments": []
     },
     {
