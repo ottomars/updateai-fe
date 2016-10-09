@@ -2,30 +2,84 @@
   "title": "Tesla",
   "items": [
     {
-      "text": "Tesla 0",
+      "text": "Elon Musk: Tesla product unveiling on the 17th (unexpected by most), followed by Tesla/SolarCity on the 28th",
+      "createdAt": "2016-10-09T09:00:00",
+      "starred": false,
+      "upvotes": 1,
+      "uri": "https://twitter.com/elonmusk/status/785138151224446976",
+      "image": "",
+      "comments": []
+    }, 
+    {
+      "text": "Tesla's critics are ignoring a crucial strength of its business",
       "createdAt": "2016-10-03T09:00:00",
       "starred": false,
       "upvotes": 0,
-      "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
-      "image": "http://www.networkedindia.com/wp-content/uploads/2016/05/tim-cook.jpg",
+      "uri": "http://uk.businessinsider.com/tesla-critics-are-ignoring-a-crucial-strength-2016-10?r=US&IR=T",
+      "image": "http://static2.uk.businessinsider.com/image/57f9b150dd089579358b4bbe-659/tesla-removes-autopilot-from-china-website-after-beijing-crash-2016-8.jpg",
       "comments": []
     },
     {
-      "text": "Tesla 1",
+      "text": "Tesla vs Texas: a 700-mile road trip in a new Model X",
       "createdAt": "2016-10-03T09:00:00",
       "starred": false,
       "upvotes": 0,
-      "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
-      "image": "http://www.networkedindia.com/wp-content/uploads/2016/05/tim-cook.jpg",
+      "uri": "http://www.carmagazine.co.uk/features/car-culture/tesla-vs-texas-a-700-mile-road-trip-review-in-a-new-2016-model-x/",
+      "image": "http://images.car.bauercdn.com/pagefiles/67384/1040x585/tvt-010.jpg",
+      "comments": []
+    }, 
+    {
+      "text": "Tesla is doubling the energy capacity of the Powerpack with new battery cells from the Gigafactory",
+      "createdAt": "2016-10-03T09:00:00",
+      "starred": false,
+      "upvotes": 0,
+      "uri": "https://electrek.co/2016/10/07/tesla-powerpack-2-0-doubling-energy-capacity-new-battery-cell-2170-gigafactory/",
+      "image": "https://electrek.files.wordpress.com/2016/09/tesla-powerpack-7.jpg",
       "comments": []
     },
     {
-      "text": "Tesla 2",
+      "text": "1,200 Miles In A Tesla Model S P90D In Just Three Days",
       "createdAt": "2016-10-03T09:00:00",
       "starred": false,
       "upvotes": 0,
-      "uri": "https://medium.com/@rynmcmns/what-will-you-do-in-a-car-when-it-drives-itself-efdac3b6e5a5#.czscuq9w3",
-      "image": "http://www.networkedindia.com/wp-content/uploads/2016/05/tim-cook.jpg",
+      "uri": "http://www.motorverso.com/1200-miles-tesla-model-s-p90d-just-three-days/#prettyPhoto",
+      "image": "http://www.motorverso.com/wp-content/uploads/2016/09/Tesla-Model-S-P90D-RJ-7-710x473.jpg",
+      "comments": []
+    },
+    {
+      "text": "Model X Falcon Wing Doors Update with v8",
+      "createdAt": "2016-10-03T09:00:00",
+      "starred": false,
+      "upvotes": 0,
+      "uri": "https://youtu.be/lz1ID_eqphw",
+      "image": "https://i.ytimg.com/vi/3iWWkVWUxis/maxresdefault.jpg",
+      "comments": []
+    },
+    {
+      "text": "Tesla drivers just passed 3 billion electric miles, saving the world 120M gallons of gas",
+      "createdAt": "2016-10-03T09:00:00",
+      "starred": false,
+      "upvotes": 0,
+      "uri": "https://twitter.com/TeslaMotors/status/784428889980493824",
+      "image": "https://pbs.twimg.com/media/CuLZ5UZXEAAdblS.jpg",
+      "comments": []
+    },
+    {
+      "text": "Elon Musk: Would also like to correct expectations that Tesla/SolarCity will need to raise equity or corp debt in Q4. Won't be necessary for either.",
+      "createdAt": "2016-10-03T09:00:00",
+      "starred": false,
+      "upvotes": 0,
+      "uri": "https://twitter.com/elonmusk/status/785139055793152000",
+      "image": "",
+      "comments": []
+    },
+    {
+      "text": "How Tesla Is Driving Electric Car Innovation",
+      "createdAt": "2016-08-03T09:00:00",
+      "starred": false,
+      "upvotes": 0,
+      "uri": "https://www.technologyreview.com/s/516961/how-tesla-is-driving-electric-car-innovation/",
+      "image": "https://d267cvn3rvuq91.cloudfront.net/i/images/tesla.1x519.jpg",
       "comments": []
     }
   ]
