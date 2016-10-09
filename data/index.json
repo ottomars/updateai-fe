@@ -2,23 +2,23 @@
   "live": [
     "diageo",
     "apple",
-    "chivas regal",
-    "pernod ricard",
-    "spirits industry",
+    "chivas-regal",
+    "pernod-ricard",
+    "spirits-industry",
     "tesla",
-    "packaging design",
-    "hendrick's gin"
+    "packaging-design",
+    "hendricks-gin"
   ],
   "selected": [
     "apple",
     "tesla",
-    "chivas regal",
+    "chivas-regal",
     "diageo",
-    "hendrick's gin"
+    "hendricks-gin"
   ],
   "active": [
     "apple",
     "tesla",
-    "chivas regal"
+    "chivas-regal"
   ]
 }
