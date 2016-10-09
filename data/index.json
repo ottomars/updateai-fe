@@ -2,22 +2,19 @@
   "live": [
     "amazon",
     "apple",
-    "bitcoin",
-    "blue-origin",
-    "drinks-packaging",
-    "google",
-    "space-x",
+    "chivas regal",
+    "pernod ricard",
+    "grey goose",
+    "spirits industry",
     "tesla",
-    "vr"
+    "packaging design",
+    "hendrick's Gin"
   ],
   "selected": [
     "apple",
-    "amazon",
-    "bitcoin"
+    "tesla"
   ],
   "active": [
-    "apple",
-    "amazon",
-    "bitcoin"
+    "apple"
   ]
 }
