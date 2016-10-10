@@ -43,6 +43,7 @@ const feedsArray = mods.keys()
 feedsArray.forEach(feed => {
   feed.items = feed.items.map(item => ({
     ...item,
+    image: item.image.startsWith('/') ? `${process.env.PUBLIC_URL}${item.image}` : item.image,
     id: guid(),
     createdAtRel: moment(item.createdAt).fromNow(),
     hostname: parse(item.uri).hostname,
@@ -51,7 +52,7 @@ feedsArray.forEach(feed => {
 })
 
 /**
- * We want to a flat, normalised data structure of feeds
+ * We want a flat, normalised data structure of feeds
  * and items for Redux.
  */
 
@@ -75,6 +76,7 @@ const selectedFeeds = Object.keys(feeds)
 const activeFeeds = Object.keys(feeds)
   .map(id => feeds[id])
   .filter(feed => active.includes(feed.filename))
+  .filter(feed => selectedFeeds.includes(feed.id))
   .map(feed => feed.id)
 
 const initialState = {feeds, items, selectedFeeds, activeFeeds}
