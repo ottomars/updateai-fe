@@ -1,0 +1,27 @@
+.FeedSorting {
+  display: flex;
+}
+
+.FeedSorting-info {
+  color: #1f5acc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  margin-right: 3px;
+}
+
+.FeedSorting-button {
+  color: #1f5acc;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  margin-right: 3px;
+}
+
+.FeedSorting-button:hover,
+.FeedSorting-button.is-selected {
+  color: #f558bf;
+}

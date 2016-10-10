@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {createSelector} from 'reselect'
 import {getSelectedFeeds} from '../../state/selectedFeeds'
 import {getActiveFeedIds, toggleFeedActive} from '../../state/activeFeeds'
-import FeedNavButton from '../feed-nav-button'
+import cn from 'classnames'
 import React from 'react'
 
 const getButtons = createSelector(
@@ -24,10 +24,19 @@ const mapDispatchToProps = (dispatch) => ({
   onButtonClick: (id) => dispatch(toggleFeedActive(id))
 })
 
-const FeedNav = ({buttons, onButtonClick}) => (
-  <div className='FeedNav'>
+const NavButton = ({label, id, active, onButtonClick}) => (
+  <a className={cn('Nav-button', {'is-active': active})}
+    onClick={e => {
+      e.preventDefault()
+      onButtonClick(id)
+    }}
+  >{label}</a>
+)
+
+const Nav = ({buttons, onButtonClick}) => (
+  <div className='Nav'>
     {buttons.map(({label, id, active}) => (
-      <FeedNavButton
+      <NavButton
         active={active}
         id={id}
         key={id}
@@ -41,4 +50,4 @@ const FeedNav = ({buttons, onButtonClick}) => (
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FeedNav)
+)(Nav)

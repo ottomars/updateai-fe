@@ -26,9 +26,9 @@ const mapDispatchToProps = (dispatch) => ({
   onNewRequest: ({value}) => value && dispatch(selectFeed(value))
 })
 
-const FeedSelector = ({dataSource, onNewRequest}) => (
-  <div className='FeedSelector'>
-    <div className='FeedSelector-searchIcon'>
+const Search = ({dataSource, onNewRequest}) => (
+  <div className='Search'>
+    <div className='Search-icon'>
       <SearchIcon color='#ccc' />
     </div>
     <AutoComplete
@@ -47,4 +47,4 @@ const FeedSelector = ({dataSource, onNewRequest}) => (
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FeedSelector)
+)(Search)

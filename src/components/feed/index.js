@@ -1,29 +1,20 @@
 import './index.css'
 import {connect} from 'react-redux'
 import {createSelector} from 'reselect'
-import {getFeeds, setFeedPage} from '../../state/feeds'
+import {deselectFeed} from '../../state/selectedFeeds'
+import {getFeeds, setFeedPage, setFeedSorting} from '../../state/feeds'
 import {getItems} from '../../state/items'
 import {LIVE_SORTING} from '../../constants'
-import chunk from 'lodash/fp/chunk'
-import FeedHeader from '../feed-header'
-import flow from 'lodash/fp/flow'
-import get from 'lodash/fp/get'
+import {paginate, liveSort} from '../../utils/sorting'
+import {moveFeedLeft, moveFeedRight} from '../../state/activeFeeds'
+import FeedActions from '../feed-actions'
+import FeedPages from '../feed-pages'
+import FeedSorting from '../feed-sorting'
 import Items from '../items'
-import PageSelector from '../page-selector'
 import React from 'react'
-import reverse from 'lodash/fp/reverse'
-import sortBy from 'lodash/fp/sortBy'
 
-const paginate = chunk(7)
-
-const liveSorting = flow(
-  sortBy(get('createdAtTime')),
-  reverse,
-  paginate
-)
-
-const sorter = {
-  [LIVE_SORTING]: liveSorting
+const sortFuncs = {
+  [LIVE_SORTING]: liveSort
 }
 
 const getIdProp = (state, {feed: {id}}) => id
@@ -45,7 +36,12 @@ const getItemsForFeed = createSelector(
 const getSortedItems = createSelector(
   getItemsForFeed,
   getSortingProp,
-  (items, sorting) => sorter[sorting](items) || []
+  (items, sorting) => {
+    const sort = sortFuncs[sorting]
+    return sort
+      ? sort(items)
+      : paginate(items)
+  }
 )
 
 const getItemsForPage = createSelector(
@@ -64,18 +60,42 @@ const mapStateToProps = (state, props) => ({
   numPages: getNumPages(state, props)
 })
 
-const mapDispatchToProps = (dispatch, props) => ({
-  onPageButtonClick: (e, page) => {
-    e.preventDefault()
-    dispatch(setFeedPage(page, props.feed.id))
-  }
+const mapDispatchToProps = (dispatch, {feed: {id}}) => ({
+  setFeedPage: page => dispatch(setFeedPage(page, id)),
+  setFeedSorting: sorting => dispatch(setFeedSorting(sorting, id)),
+  moveFeedLeft: () => dispatch(moveFeedLeft(id)),
+  moveFeedRight: () => dispatch(moveFeedRight(id)),
+  deselectFeed: () => dispatch(deselectFeed(id))
 })
 
-const Feed = ({feed, items, numPages, onPageButtonClick}) => (
+const Feed = ({
+  feed,
+  items,
+  numPages,
+  setFeedPage,
+  setFeedSorting,
+  moveFeedLeft,
+  moveFeedRight,
+  deselectFeed
+}) => (
   <div className='Feed'>
-    <FeedHeader {...feed}/>
+    <div className='Feed-top'>
+      <div className='Feed-topInner'>
+        <p className='Feed-title'>{feed.title}</p>
+        <div className='Feed-actions'>
+          <FeedActions
+            onMoveLeftClick={moveFeedLeft}
+            onMoveRightClick={moveFeedRight}
+            onDeselectClick={deselectFeed}
+          />
+        </div>
+      </div>
+      <div className='Feed-sorting'>
+        <FeedSorting sorting={feed.sorting} onSortButtonClick={setFeedSorting}/>
+      </div>
+    </div>
     <Items items={items} />
-    <PageSelector numPages={numPages} page={feed.page} onPageButtonClick={onPageButtonClick}/>
+    <FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>
   </div>
 )
 

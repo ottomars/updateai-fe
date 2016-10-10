@@ -1,4 +1,12 @@
-.FeedNavButton {
+.Nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.Nav-button {
   color: #ccc;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
@@ -9,7 +17,7 @@
 }
 
 
-.FeedNavButton.is-active {
+.Nav-button.is-active {
   font-weight: 300;
   color: #f558bf;
 }

@@ -1,2 +1,42 @@
-.Feed {
+.Feed-top {
+}
+
+.Feed-topInner {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.Feed-title {
+  align-items: flex-start;
+  color: #1f5acc;
+  flex-grow: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.Feed-actions {
+  flex-shrink: 0;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: -5px;
+  width: 30px;
+}
+
+.Feed-sorting {
+  margin-bottom: 10px;
+}
+
+@media (hover) {
+  .Feed-actions,
+  .Feed-sorting {
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+
+  .Feed-top:hover .Feed-actions,
+  .Feed-top:hover .Feed-sorting {
+    opacity: 1;
+  }
 }

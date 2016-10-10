@@ -8,7 +8,10 @@ const PageButton = ({pageNum, selected, onPageButtonClick}) => {
   const Icon = selected ? RadioButtonCheckedIcon : RadioButtonUncheckedIcon
   return (
     <IconButton
-      onTouchTap={e => onPageButtonClick(e, pageNum)}
+      onTouchTap={e => {
+        e.preventDefault()
+        onPageButtonClick(pageNum)
+      }}
       iconStyle={{width: 18, height: 18}}
       style={{width: 18, height: 18, padding: 0}}
     >
@@ -17,10 +20,10 @@ const PageButton = ({pageNum, selected, onPageButtonClick}) => {
   )
 }
 
-const PageSelector = ({page, numPages, onPageButtonClick}) => (
-  <div className='PageSelector'>
+const FeedPages = ({page, numPages, onPageButtonClick}) => (
+  <div className='FeedPages'>
     {Array.from({length: numPages}).map((v, k) => (
-      <div className='PageSelector-button' key={k}>
+      <div className='FeedPages-button' key={k}>
         <PageButton
           pageNum={k}
           selected={k === page}
@@ -31,4 +34,4 @@ const PageSelector = ({page, numPages, onPageButtonClick}) => (
   </div>
 )
 
-export default PageSelector
+export default FeedPages
