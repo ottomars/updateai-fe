@@ -1,17 +1,18 @@
 import './index.css'
 import {connect} from 'react-redux'
-import {LIVE_SORTING} from '../../constants'
 import {createSelector} from 'reselect'
-import {getFeeds} from '../../state/feeds'
+import {getFeeds, setFeedPage} from '../../state/feeds'
 import {getItems} from '../../state/items'
-import FeedHeader from '../feed-header'
-import Items from '../items'
-import React from 'react'
-import sortBy from 'lodash/fp/sortBy'
-import get from 'lodash/fp/get'
-import reverse from 'lodash/fp/reverse'
-import flow from 'lodash/fp/flow'
+import {LIVE_SORTING} from '../../constants'
 import chunk from 'lodash/fp/chunk'
+import FeedHeader from '../feed-header'
+import flow from 'lodash/fp/flow'
+import get from 'lodash/fp/get'
+import Items from '../items'
+import PageSelector from '../page-selector'
+import React from 'react'
+import reverse from 'lodash/fp/reverse'
+import sortBy from 'lodash/fp/sortBy'
 
 const paginate = chunk(7)
 
@@ -63,13 +64,22 @@ const mapStateToProps = (state, props) => ({
   numPages: getNumPages(state, props)
 })
 
-const Feed = ({feed, items, numPages}) => (
+const mapDispatchToProps = (dispatch, props) => ({
+  onPageButtonClick: (e, page) => {
+    e.preventDefault()
+    dispatch(setFeedPage(page, props.feed.id))
+  }
+})
+
+const Feed = ({feed, items, numPages, onPageButtonClick}) => (
   <div className='Feed'>
     <FeedHeader {...feed}/>
     <Items items={items} />
+    <PageSelector numPages={numPages} page={feed.page} onPageButtonClick={onPageButtonClick}/>
   </div>
 )
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Feed)

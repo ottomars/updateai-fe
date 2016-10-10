@@ -3,7 +3,7 @@ import {getFeeds} from './feeds'
 
 // Reducer
 
-export default (state = [], action) => {
+export default (state = [], action = {}) => {
   switch (action.type) {
     case 'SELECT_FEED':
       return [...state, action.id]
