@@ -1,5 +1,5 @@
 import {basename} from 'path'
-import {ITEMS_PER_LANE_PAGE, LIVE_SORTING} from '../constants'
+import {LIVE_SORTING} from '../constants'
 import {live, selected, active} from '../../data'
 import {normalize, Schema, arrayOf} from 'normalizr'
 import {parse} from 'url'
@@ -31,9 +31,20 @@ const feedsArray = mods.keys()
   .map(feed => ({
     ...feed,
     page: 0,
-    numPages: Math.ceil(feed.items.length / ITEMS_PER_LANE_PAGE),
     sorting: LIVE_SORTING
   }))
+
+const myFeed = {
+  filename: 'my-feed',
+  id: guid(),
+  items: [],
+  page: 0,
+  sorting: LIVE_SORTING,
+  title: 'My Feed',
+  isMyFeed: true
+}
+
+feedsArray.unshift(myFeed)
 
 /**
  * Go through the items of each feed and give them a
@@ -41,14 +52,18 @@ const feedsArray = mods.keys()
  */
 
 feedsArray.forEach(feed => {
-  feed.items = feed.items.map(item => ({
-    ...item,
-    image: item.image.startsWith('/') ? `${process.env.PUBLIC_URL}${item.image}` : item.image,
-    id: guid(),
-    createdAtRel: moment(item.createdAt).fromNow(),
-    hostname: parse(item.uri).hostname,
-    visited: false
-  }))
+  feed.items = feed.items.map(item => {
+    const createdAt = moment(item.createdAt)
+    return {
+      ...item,
+      image: item.image.startsWith('/') ? `${process.env.PUBLIC_URL}${item.image}` : item.image,
+      id: guid(),
+      createdAtRel: createdAt.fromNow(),
+      createdAtTime: createdAt.valueOf(),
+      hostname: parse(item.uri).hostname,
+      visited: false
+    }
+  })
 })
 
 /**
@@ -67,6 +82,9 @@ const {entities: {feeds, items}} = normalize(feedsArray, arrayOf(feedSchema))
 /**
  * Create the selected and active state arrays for the feeds.
  */
+
+selected.unshift('my-feed')
+active.unshift('my-feed')
 
 const selectedFeeds = Object.keys(feeds)
   .map(id => feeds[id])

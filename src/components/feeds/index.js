@@ -14,7 +14,7 @@ const Feeds = ({feeds}) => (
     <div className='Feeds-inner'>
       {feeds.map(feed => (
         <div key={feed.id} className='Feeds-feed'>
-          <Feed {...feed}/>
+          <Feed feed={feed}/>
         </div>
       ))}
     </div>
