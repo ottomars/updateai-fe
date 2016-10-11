@@ -6,6 +6,7 @@ import {parse} from 'url'
 import guid from './guid'
 import moment from 'moment'
 
+const now = NOW()
 const mods = require.context('../../data', false, /^(?!.*index\.json$).*\.json$/)
 
 /**
@@ -58,7 +59,8 @@ feedsArray.forEach(feed => {
       ...item,
       image: item.image.startsWith('/') ? `${process.env.PUBLIC_URL}${item.image}` : item.image,
       id: guid(),
-      createdAtRel: createdAt.from(NOW),
+      createdAt,
+      createdAtRel: createdAt.from(now),
       createdAtTime: createdAt.valueOf(),
       hostname: parse(item.uri).hostname,
       visited: false

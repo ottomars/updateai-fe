@@ -8,7 +8,7 @@ export const MONTH_SORTING = 'month'
 export const YEAR_SORTING = 'year'
 export const ALL_TIME_SORTING = 'all-time'
 
-export const NOW = moment(now)
+export const NOW = () => moment(now)
 
 export const SORT_LABELS = {
   [LIVE_SORTING]: 'Live',
