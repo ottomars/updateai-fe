@@ -38,7 +38,8 @@ export default (state = [], action = {}) => {
         }
       }
     case 'ACTIVATE_FEED':
-      return [...state, action.id]
+    case 'SELECT_FEED':
+      return [action.id, ...state]
     case 'DEACTIVATE_FEED':
     case 'DESELECT_FEED':
       {
