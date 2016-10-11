@@ -1,6 +1,7 @@
 .Feeds {
   margin: 0 auto;
   max-width: 1200px;
+  padding-bottom: 40px;
 }
 
 .Feeds--wide {

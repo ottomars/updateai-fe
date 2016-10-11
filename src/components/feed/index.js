@@ -1,20 +1,32 @@
 import './index.css'
+import {
+  LIVE_SORTING,
+  DAY_SORTING,
+  WEEK_SORTING,
+  MONTH_SORTING,
+  YEAR_SORTING,
+  ALL_TIME_SORTING,
+  SORT_LABELS
+} from '../../constants'
 import {connect} from 'react-redux'
 import {createSelector} from 'reselect'
 import {deselectFeed} from '../../state/selectedFeeds'
 import {getFeeds, setFeedPage, setFeedSorting} from '../../state/feeds'
 import {getItems} from '../../state/items'
-import {LIVE_SORTING} from '../../constants'
-import {paginate, liveSort} from '../../utils/sorting'
+import {liveSort, daySort, weekSort, monthSort, yearSort, allTimeSort} from '../../utils/sorting'
 import {moveFeedLeft, moveFeedRight} from '../../state/activeFeeds'
 import FeedActions from '../feed-actions'
 import FeedPages from '../feed-pages'
-import FeedSorting from '../feed-sorting'
 import Items from '../items'
 import React from 'react'
 
 const sortFuncs = {
-  [LIVE_SORTING]: liveSort
+  [LIVE_SORTING]: liveSort,
+  [DAY_SORTING]: daySort,
+  [WEEK_SORTING]: weekSort,
+  [MONTH_SORTING]: monthSort,
+  [YEAR_SORTING]: yearSort,
+  [ALL_TIME_SORTING]: allTimeSort
 }
 
 const getIdProp = (state, {feed: {id}}) => id
@@ -36,12 +48,7 @@ const getItemsForFeed = createSelector(
 const getSortedItems = createSelector(
   getItemsForFeed,
   getSortingProp,
-  (items, sorting) => {
-    const sort = sortFuncs[sorting]
-    return sort
-      ? sort(items)
-      : paginate(items)
-  }
+  (items, sorting) => sortFuncs[sorting](items)
 )
 
 const getItemsForPage = createSelector(
@@ -80,21 +87,19 @@ const Feed = ({
 }) => (
   <div className='Feed'>
     <div className='Feed-top'>
-      <div className='Feed-topInner'>
-        <p className='Feed-title'>{feed.title}</p>
-        <div className='Feed-actions'>
-          <FeedActions
-            onMoveLeftClick={moveFeedLeft}
-            onMoveRightClick={moveFeedRight}
-            onDeselectClick={deselectFeed}
-          />
-        </div>
-      </div>
-      <div className='Feed-sorting'>
-        <FeedSorting sorting={feed.sorting} onSortButtonClick={setFeedSorting}/>
+      <p className='Feed-title'>{feed.title} <span style={{opacity: 0.5}}>{SORT_LABELS[feed.sorting]}</span></p>
+      <div className='Feed-actions'>
+        <FeedActions
+          sorting={feed.sorting}
+          onMoveLeftClick={moveFeedLeft}
+          onMoveRightClick={moveFeedRight}
+          onDeselectClick={deselectFeed}
+          onSortClick={setFeedSorting}
+        />
       </div>
     </div>
     <Items items={items} />
+    {items.length === 0 && (<p className='Feed-noResults'>no results</p>)}
     <FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>
   </div>
 )

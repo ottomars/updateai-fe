@@ -1,19 +1,25 @@
 .Feed-top {
-}
-
-.Feed-topInner {
   display: flex;
-  margin-bottom: 5px;
+  padding-bottom: 40px;
 }
 
 .Feed-title {
-  align-items: flex-start;
   color: #1f5acc;
   flex-grow: 1;
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 300;
   line-height: 1;
+}
+
+.Feed-noResults {
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .Feed-actions {
@@ -24,19 +30,13 @@
   width: 30px;
 }
 
-.Feed-sorting {
-  margin-bottom: 10px;
-}
-
 @media (hover) {
-  .Feed-actions,
-  .Feed-sorting {
+  .Feed-actions {
     opacity: 0;
     transition: opacity 250ms;
   }
 
-  .Feed-top:hover .Feed-actions,
-  .Feed-top:hover .Feed-sorting {
+  .Feed-top:hover .Feed-actions {
     opacity: 1;
   }
 }

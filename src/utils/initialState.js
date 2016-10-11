@@ -1,5 +1,5 @@
 import {basename} from 'path'
-import {LIVE_SORTING} from '../constants'
+import {DAY_SORTING, NOW} from '../constants'
 import {live, selected, active} from '../../data'
 import {normalize, Schema, arrayOf} from 'normalizr'
 import {parse} from 'url'
@@ -31,7 +31,7 @@ const feedsArray = mods.keys()
   .map(feed => ({
     ...feed,
     page: 0,
-    sorting: LIVE_SORTING
+    sorting: DAY_SORTING
   }))
 
 const myFeed = {
@@ -39,7 +39,7 @@ const myFeed = {
   id: guid(),
   items: [],
   page: 0,
-  sorting: LIVE_SORTING,
+  sorting: DAY_SORTING,
   title: 'My Feed',
   isMyFeed: true
 }
@@ -58,7 +58,7 @@ feedsArray.forEach(feed => {
       ...item,
       image: item.image.startsWith('/') ? `${process.env.PUBLIC_URL}${item.image}` : item.image,
       id: guid(),
-      createdAtRel: createdAt.fromNow(),
+      createdAtRel: createdAt.from(NOW),
       createdAtTime: createdAt.valueOf(),
       hostname: parse(item.uri).hostname,
       visited: false

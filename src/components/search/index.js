@@ -34,7 +34,6 @@ const Search = ({dataSource, onNewRequest}) => (
     <AutoComplete
       hintText='Search feeds'
       dataSource={dataSource}
-      openOnFocus={true}
       fullWidth={true}
       menuCloseDelay={0}
       filter={AutoComplete.fuzzyFilter}

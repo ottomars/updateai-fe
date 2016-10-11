@@ -1,4 +1,7 @@
 import './index.css'
+import {
+  SORT_LABELS
+} from '../../constants'
 import ChevronLeftIcon from 'material-ui/svg-icons/navigation/chevron-left'
 import ChevronRightIcon from 'material-ui/svg-icons/navigation/chevron-right'
 import DeleteIcon from 'material-ui/svg-icons/action/delete'
@@ -12,6 +15,7 @@ import React, {Component} from 'react'
 import SendIcon from 'material-ui/svg-icons/content/send'
 import SentimentSatisfiedIcon from 'material-ui/svg-icons/social/sentiment-satisfied'
 import ShareIcon from 'material-ui/svg-icons/social/share'
+import SortIcon from 'material-ui/svg-icons/content/sort'
 
 class FeedActions extends Component {
 
@@ -50,6 +54,29 @@ class FeedActions extends Component {
     this.props.onDeselectClick(this.props.id)
   }
 
+  onSortTouchTap (e, sortOption) {
+    e.preventDefault()
+    this.setState({open: false})
+    this.props.onSortClick(sortOption, this.props.id)
+  }
+
+  getSortingMenuItems () {
+    const {sorting} = this.props
+    return Object
+      .keys(SORT_LABELS)
+      .map(sortOption => {
+        const label = SORT_LABELS[sortOption]
+        return (
+          <MenuItem
+            insetChildren={true}
+            primaryText={label}
+            onTouchTap={e => this.onSortTouchTap(e, sortOption)}
+            checked={sorting === sortOption}
+          />
+        )
+      })
+  }
+
   render () {
     return (
       <div className='FeedActions'>
@@ -71,6 +98,13 @@ class FeedActions extends Component {
             <MenuItem primaryText="Submit a link" leftIcon={<SendIcon />} />
             <MenuItem primaryText="Share" leftIcon={<ShareIcon />} />
             <MenuItem primaryText="Give feedback" leftIcon={<SentimentSatisfiedIcon />} />
+            <Divider />
+            <MenuItem
+              primaryText="Sort by"
+              leftIcon={<SortIcon />}
+              rightIcon={<ChevronRightIcon />}
+              menuItems={this.getSortingMenuItems()}
+            />
             <Divider />
             <MenuItem
               primaryText="Move left"
