@@ -5,8 +5,7 @@ import {
   WEEK_SORTING,
   MONTH_SORTING,
   YEAR_SORTING,
-  ALL_TIME_SORTING,
-  SORT_LABELS
+  ALL_TIME_SORTING
 } from '../../constants'
 import {connect} from 'react-redux'
 import {createSelector} from 'reselect'
@@ -87,7 +86,7 @@ const Feed = ({
 }) => (
   <div className='Feed'>
     <div className='Feed-top'>
-      <p className='Feed-title'>{feed.title} <span style={{opacity: 0.5}}>{SORT_LABELS[feed.sorting]}</span></p>
+      <p className='Feed-title'>{feed.title}</p>
       <div className='Feed-actions'>
         <FeedActions
           sorting={feed.sorting}
@@ -100,7 +99,7 @@ const Feed = ({
     </div>
     <Items items={items} />
     {items.length === 0 && (<p className='Feed-noResults'>no results</p>)}
-    <FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>
+    {numPages > 1 && (<FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>)}
   </div>
 )
 

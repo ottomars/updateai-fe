@@ -12,7 +12,6 @@ import MenuItem from 'material-ui/MenuItem'
 import MoreHorizIcon from 'material-ui/svg-icons/navigation/more-horiz'
 import Popover from 'material-ui/Popover'
 import React, {Component} from 'react'
-import SendIcon from 'material-ui/svg-icons/content/send'
 import SentimentSatisfiedIcon from 'material-ui/svg-icons/social/sentiment-satisfied'
 import ShareIcon from 'material-ui/svg-icons/social/share'
 import SortIcon from 'material-ui/svg-icons/content/sort'
@@ -95,7 +94,6 @@ class FeedActions extends Component {
           onRequestClose={() => this.onRequestClose()}
         >
           <Menu>
-            <MenuItem primaryText="Submit a link" leftIcon={<SendIcon />} />
             <MenuItem primaryText="Share" leftIcon={<ShareIcon />} />
             <MenuItem primaryText="Give feedback" leftIcon={<SentimentSatisfiedIcon />} />
             <Divider />
