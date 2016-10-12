@@ -24,6 +24,28 @@ export default (state = {}, action = {}) => {
           }
         }
       }
+    case 'UP_VOTE_ITEM':
+      {
+        const {id} = action
+        return {
+          ...state,
+          [id]: {
+            ...state[id],
+            upvotes: state[id].upvotes + 1
+          }
+        }
+      }
+    case 'DOWN_VOTE_ITEM':
+      {
+        const {id} = action
+        return {
+          ...state,
+          [id]: {
+            ...state[id],
+            upvotes: state[id].upvotes - 1
+          }
+        }
+      }
     default: return state
   }
 }
@@ -37,3 +59,7 @@ export const getItems = state => state.items
 export const starItem = id => ({type: 'STAR_ITEM', id})
 
 export const unstarItem = id => ({type: 'UNSTAR_ITEM', id})
+
+export const upVoteItem = id => ({type: 'UP_VOTE_ITEM', id})
+
+export const downVoteItem = id => ({type: 'DOWN_VOTE_ITEM', id})

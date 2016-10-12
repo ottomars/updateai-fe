@@ -64,7 +64,7 @@ feedsArray.forEach(feed => {
       createdAtTime: createdAt.valueOf(),
       hostname: parse(item.uri).hostname.replace(/^www\./g, ''),
       visited: false,
-      parentFeed: feed.title
+      parentFeedTag: feed.title.replace(/\W+/g, '')
     }
   })
 })

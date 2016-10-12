@@ -53,6 +53,7 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 1;
+  letter-spacing: 1px;
   padding: 5px;
   text-transform: uppercase;
 }
@@ -65,5 +66,40 @@
   align-content: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 10px 20px 10px;
+  padding: 0 10px 10px 10px;
+}
+
+.Item-upvotes {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.Item-upvotesValue {
+  color: #aaa;
+  flex-grow: 1;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.Item-share {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.Item-shareText {
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.Item-star {
+  flex-shrink: 0;
 }
