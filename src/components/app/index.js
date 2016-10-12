@@ -1,10 +1,11 @@
 import './index.css'
-import Nav from '../nav'
 import Feeds from '../feeds'
-import Search from '../search'
 import Header from '../header'
 import Logo from '../logo'
+import Nav from '../nav'
 import React from 'react'
+import Search from '../search'
+import UserActions from '../user-actions'
 
 const App = () => (
   <div className='App'>
@@ -12,6 +13,7 @@ const App = () => (
       <Logo />
       <Nav />
       <Search />
+      <UserActions />
     </Header>
     <Feeds />
   </div>

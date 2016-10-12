@@ -44,8 +44,22 @@ const getItemsForFeed = createSelector(
   }
 )
 
-const getSortedItems = createSelector(
+const getStarred = state => state.filters.starred
+
+const getFilteredItemsForFeed = createSelector(
   getItemsForFeed,
+  getStarred,
+  (items, starred) => {
+    if (starred) {
+      return items.filter(item => item.starred)
+    } else {
+      return items
+    }
+  }
+)
+
+const getSortedItems = createSelector(
+  getFilteredItemsForFeed,
   getSortingProp,
   (items, sorting) => sortFuncs[sorting](items)
 )
