@@ -113,7 +113,6 @@ const Feed = ({
         />
       </div>
     </div>
-    <FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>
     {items.map(item => (
       <Item
         key={item.id}
@@ -122,6 +121,7 @@ const Feed = ({
       />
     ))}
     {items.length === 0 && (<p className='Feed-noResults'>Empty</p>)}
+    {numPages > 1 && (<FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>)}
   </div>
 )
 
