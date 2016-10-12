@@ -97,7 +97,7 @@ const Feed = ({
         />
       </div>
     </div>
-    <Items items={items} />
+    <Items items={items} isMyFeed={feed.isMyFeed} />
     {items.length === 0 && (<p className='Feed-noResults'>no results</p>)}
     {numPages > 1 && (<FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>)}
   </div>

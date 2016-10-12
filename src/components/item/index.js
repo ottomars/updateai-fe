@@ -14,16 +14,21 @@ const Item = ({
   uri,
   upvotes,
   comments,
-  starred
+  starred,
+  parentFeed,
+  isMyFeed
 }) => (
   <a className='Item' href={uri} target='_blank'>
     {image && <ItemMedia image={image} />}
     <p className='Item-text'>{text}</p>
-    <p className='Item-info'>{createdAtRel} via {hostname}</p>
-    <div className="Item-bottom">
-      <p className="Item-upvotes">Upvotes {upvotes}</p>
-      <p className="Item-upvotes">Comments {comments.length}</p>
-      <p className="Item-upvotes">Starred {starred ? 'yes' : 'no'}</p>
+    <div className='Item-info'>
+      <p className='Item-createdAtAndHostName'>{createdAtRel} via {hostname}</p>
+      {isMyFeed && (<p className='Item-feedTag'>{parentFeed}</p>)}
+    </div>
+    <div className='Item-bottom'>
+      <p className='Item-upvotes'>Upvotes {upvotes}</p>
+      <p className='Item-upvotes'>Comments {comments.length}</p>
+      <p className='Item-upvotes'>Starred {starred ? 'yes' : 'no'}</p>
     </div>
   </a>
 )

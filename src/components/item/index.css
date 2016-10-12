@@ -30,12 +30,35 @@
 }
 
 .Item-info {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 20px 10px;
+}
+
+.Item-createdAtAndHostName {
   color: #aaa;
+  flex-grow: 1;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 1;
-  padding: 0 10px 20px 10px;
+}
+
+.Item-feedTag {
+  background-color: rgb(113, 136, 255);
+  border-radius: 2px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.Item-feedTag::before {
+  content: '#';
 }
 
 .Item-bottom {

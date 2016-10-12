@@ -62,8 +62,9 @@ feedsArray.forEach(feed => {
       createdAt,
       createdAtRel: createdAt.from(now),
       createdAtTime: createdAt.valueOf(),
-      hostname: parse(item.uri).hostname,
-      visited: false
+      hostname: parse(item.uri).hostname.replace(/^www\./g, ''),
+      visited: false,
+      parentFeed: feed.title
     }
   })
 })
