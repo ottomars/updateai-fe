@@ -72,12 +72,11 @@
 .Item-upvotes {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  width: 80px;
 }
 
 .Item-upvotesValue {
   color: #aaa;
-  flex-grow: 1;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -87,8 +86,7 @@
 .Item-share {
   display: flex;
   align-items: center;
-  flex-grow: 1;
-  justify-content: center;
+  width: 80px;
 }
 
 .Item-shareText {
@@ -101,5 +99,7 @@
 }
 
 .Item-star {
-  flex-shrink: 0;
+  width: 80px;
+  display: flex;
+  justify-content: flex-end;
 }
