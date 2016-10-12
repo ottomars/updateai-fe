@@ -1,13 +1,10 @@
-.Header {
-  background-color: #fff;
-  border-bottom: 2px solid #1f5acc;
+.Footer {
+  border-top: 2px solid #1f5acc;
   height: 80px;
-  position: fixed;
   width: 100%;
-  z-index: 100;
 }
 
-.Header-inner {
+.Footer-inner {
   align-items: center;
   display: flex;
   height: 100%;
@@ -15,4 +12,11 @@
   margin: 0 auto;
   max-width: 1210px;
   padding: 0 12px;
+}
+
+.Footer-item {
+  color: #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
 }

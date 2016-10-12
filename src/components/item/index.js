@@ -71,13 +71,13 @@ const Item = ({
         </IconButton>
       </div>
       <div className='Item-share'>
-        <p className='Item-shareText'>Share</p>
         <IconButton
-          iconStyle={{width: 28, height: 28}}
-          style={{width: 28, height: 28, padding: 0}}
+          iconStyle={{width: 22, height: 22}}
+          style={{width: 22, height: 22, padding: 0}}
         >
           <ShareIcon color='#ccc'/>
         </IconButton>
+        <p className='Item-shareText'>Share</p>
       </div>
       <div className='Item-star'>
         <IconButton

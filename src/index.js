@@ -15,13 +15,16 @@ import thunk from 'redux-thunk'
 
 injectTapEventPlugin()
 
+const middleware = [thunk]
+
+if (process.env.NODE_ENV === 'development') {
+  middleware.push(logger({collapsed: true, duration: true}))
+}
+
 const store = createStore(
   rootReducer,
   initialState,
-  applyMiddleware(
-    thunk,
-    logger({collapsed: true, duration: true})
-  )
+  applyMiddleware(...middleware)
 )
 
 ReactDOM.render(

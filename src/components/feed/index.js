@@ -14,10 +14,12 @@ import {getFeeds, setFeedPage, setFeedSorting} from '../../state/feeds'
 import {getItems} from '../../state/items'
 import {liveSort, daySort, weekSort, monthSort, yearSort, allTimeSort} from '../../utils/sorting'
 import {moveFeedLeft, moveFeedRight} from '../../state/activeFeeds'
+import cn from 'classnames'
 import FeedActions from '../feed-actions'
 import FeedPages from '../feed-pages'
 import Items from '../items'
 import React from 'react'
+import Item from '../item'
 
 const sortFuncs = {
   [LIVE_SORTING]: liveSort,
@@ -98,7 +100,7 @@ const Feed = ({
   moveFeedRight,
   deselectFeed
 }) => (
-  <div className='Feed'>
+  <div className={cn('Feed', {'Feed--reducedItems': items.length < 7})}>
     <div className='Feed-top'>
       <p className='Feed-title'>{feed.title}</p>
       <div className='Feed-actions'>
@@ -111,9 +113,15 @@ const Feed = ({
         />
       </div>
     </div>
-    <Items items={items} isMyFeed={feed.isMyFeed} />
-    {items.length === 0 && (<p className='Feed-noResults'>no results</p>)}
-    {numPages > 1 && (<FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>)}
+    <FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>
+    {items.map(item => (
+      <Item
+        key={item.id}
+        {...item}
+        isMyFeed={feed.isMyFeed}
+      />
+    ))}
+    {items.length === 0 && (<p className='Feed-noResults'>Empty</p>)}
   </div>
 )
 
