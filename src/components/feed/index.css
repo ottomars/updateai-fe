@@ -1,13 +1,13 @@
 .Feed {
   height: 100%;
-  background-color: rgb(235, 242, 242);
+  background-color: #fcfcfc;
   border-radius: 4px;
   padding-bottom: 12px;
 }
 
 .Feed-top {
   border-bottom: 1px solid rgb(210, 217, 221);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .Feed-topInner {
