@@ -14,10 +14,8 @@ import {getFeeds, setFeedPage, setFeedSorting} from '../../state/feeds'
 import {getItems} from '../../state/items'
 import {liveSort, daySort, weekSort, monthSort, yearSort, allTimeSort} from '../../utils/sorting'
 import {moveFeedLeft, moveFeedRight} from '../../state/activeFeeds'
-import cn from 'classnames'
 import FeedActions from '../feed-actions'
 import FeedPages from '../feed-pages'
-import Items from '../items'
 import React from 'react'
 import Item from '../item'
 
@@ -100,7 +98,7 @@ const Feed = ({
   moveFeedRight,
   deselectFeed
 }) => (
-  <div className={cn('Feed', {'Feed--reducedItems': items.length < 7})}>
+  <div className='Feed'>
     <div className='Feed-top'>
       <p className='Feed-title'>{feed.title}</p>
       <div className='Feed-actions'>

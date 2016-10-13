@@ -6,6 +6,7 @@ import Nav from '../nav'
 import React from 'react'
 import Search from '../search'
 import UserActions from '../user-actions'
+import Footer from '../footer'
 
 const App = () => (
   <div className='App'>
@@ -16,6 +17,7 @@ const App = () => (
       <UserActions />
     </Header>
     <Feeds />
+    <Footer />
   </div>
 )
 
