@@ -39,9 +39,10 @@ const Item = ({
   upVoteItem,
   downVoteItem,
   setItemVisited,
-  visited
+  visited,
+  voted
 }) => (
-  <div className={cn('Item', {'Item--visited': visited})}>
+  <div className={cn('Item', {'Item--visited': visited, 'Item--voted': voted})}>
     <a className='Item-link' href={uri} target='_blank' onClick={e => {
       setItemVisited(id)
     }}>
@@ -60,10 +61,10 @@ const Item = ({
             e.preventDefault()
             downVoteItem(id)
           }}
-          iconStyle={{width: 28, height: 28}}
-          style={{width: 28, height: 28, padding: 0}}
+          iconStyle={{width: 36, height: 36}}
+          style={{width: 36, height: 36, padding: 0}}
         >
-          <ExpandMoreIcon color='#ccc'/>
+          <ExpandMoreIcon color={voted ? '#333' : '#999'}/>
         </IconButton>
         <p className='Item-upvotesValue'>{upvotes}</p>
         <IconButton
@@ -72,10 +73,10 @@ const Item = ({
             e.preventDefault()
             upVoteItem(id)
           }}
-          iconStyle={{width: 28, height: 28}}
-          style={{width: 28, height: 28, padding: 0}}
+          iconStyle={{width: 36, height: 36}}
+          style={{width: 36, height: 36, padding: 0}}
         >
-          <ExpandLessIcon color='#ccc'/>
+          <ExpandLessIcon color={voted ? '#333' : '#999'} />
         </IconButton>
       </div>
       <div className='Item-share'>
@@ -83,7 +84,7 @@ const Item = ({
           iconStyle={{width: 22, height: 22}}
           style={{width: 22, height: 22, padding: 0}}
         >
-          <ShareIcon color='#ccc'/>
+          <ShareIcon color='#999'/>
         </IconButton>
         <p className='Item-shareText'>Share</p>
       </div>
@@ -98,10 +99,10 @@ const Item = ({
               starItem(id)
             }
           }}
-          iconStyle={{width: 28, height: 28}}
-          style={{width: 28, height: 28, padding: 0}}
+          iconStyle={{width: 36, height: 36}}
+          style={{width: 36, height: 36, padding: 0}}
         >
-          {starred ? (<StarIcon color='#E5AA17'/>) : (<StarBorderIcon color='#ccc'/>)}
+          {starred ? (<StarIcon color='#E5AA17'/>) : (<StarBorderIcon color='#999'/>)}
         </IconButton>
       </div>
     </div>

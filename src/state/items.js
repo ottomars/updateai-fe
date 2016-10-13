@@ -27,22 +27,26 @@ export default (state = {}, action = {}) => {
     case 'UP_VOTE_ITEM':
       {
         const {id} = action
+        const {origUpvotes} = state[id]
         return {
           ...state,
           [id]: {
             ...state[id],
-            upvotes: state[id].upvotes + 1
+            upvotes: origUpvotes + 1,
+            voted: true
           }
         }
       }
     case 'DOWN_VOTE_ITEM':
       {
         const {id} = action
+        const {origUpvotes} = state[id]
         return {
           ...state,
           [id]: {
             ...state[id],
-            upvotes: state[id].upvotes - 1
+            upvotes: origUpvotes - 1,
+            voted: true
           }
         }
       }

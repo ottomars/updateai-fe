@@ -12,7 +12,7 @@ import MenuItem from 'material-ui/MenuItem'
 import MoreHorizIcon from 'material-ui/svg-icons/navigation/more-horiz'
 import Popover from 'material-ui/Popover'
 import React, {Component} from 'react'
-import SentimentSatisfiedIcon from 'material-ui/svg-icons/social/sentiment-satisfied'
+import SendIcon from 'material-ui/svg-icons/content/send'
 import ShareIcon from 'material-ui/svg-icons/social/share'
 import SortIcon from 'material-ui/svg-icons/content/sort'
 
@@ -95,7 +95,7 @@ class FeedActions extends Component {
         >
           <Menu>
             <MenuItem primaryText="Share" leftIcon={<ShareIcon />} />
-            <MenuItem primaryText="Give feedback" leftIcon={<SentimentSatisfiedIcon />} />
+            <MenuItem primaryText="Give feedback" leftIcon={<SendIcon />} />
             <Divider />
             <MenuItem
               primaryText="Sort by"
