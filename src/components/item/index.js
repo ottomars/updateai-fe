@@ -1,6 +1,7 @@
 import './index.css'
 import {connect} from 'react-redux'
-import {starItem, unstarItem, upVoteItem, downVoteItem} from '../../state/items'
+import {starItem, unstarItem, upVoteItem, downVoteItem, setItemVisited} from '../../state/items'
+import cn from 'classnames'
 import ExpandLessIcon from 'material-ui/svg-icons/navigation/expand-less'
 import ExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-more'
 import IconButton from 'material-ui/IconButton'
@@ -17,7 +18,8 @@ const mapDispatchToProps = (dispatch) => ({
   starItem: id => dispatch(starItem(id)),
   unstarItem: id => dispatch(unstarItem(id)),
   upVoteItem: id => dispatch(upVoteItem(id)),
-  downVoteItem: id => dispatch(downVoteItem(id))
+  downVoteItem: id => dispatch(downVoteItem(id)),
+  setItemVisited: id => dispatch(setItemVisited(id))
 })
 
 const Item = ({
@@ -35,11 +37,17 @@ const Item = ({
   starItem,
   unstarItem,
   upVoteItem,
-  downVoteItem
+  downVoteItem,
+  setItemVisited,
+  visited
 }) => (
-  <a className='Item' href={uri} target='_blank'>
-    {image && <ItemMedia image={image} />}
-    <p className='Item-text'>{text}</p>
+  <div className={cn('Item', {'Item--visited': visited})}>
+    <a className='Item-link' href={uri} target='_blank' onClick={e => {
+      setItemVisited(id)
+    }}>
+      {image && <ItemMedia image={image} />}
+      <p className='Item-text'>{text}</p>
+    </a>
     <div className='Item-info'>
       <p className='Item-createdAtAndHostName'>{createdAtRel} via {hostname}</p>
       {isMyFeed && (<p className='Item-feedTag'>{parentFeedTag}</p>)}
@@ -97,7 +105,7 @@ const Item = ({
         </IconButton>
       </div>
     </div>
-  </a>
+  </div>
 )
 
 export default connect(

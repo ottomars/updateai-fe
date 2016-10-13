@@ -46,6 +46,17 @@ export default (state = {}, action = {}) => {
           }
         }
       }
+    case 'SET_ITEM_VISITED':
+      {
+        const {id} = action
+        return {
+          ...state,
+          [id]: {
+            ...state[id],
+            visited: true
+          }
+        }
+      }
     default: return state
   }
 }
@@ -63,3 +74,5 @@ export const unstarItem = id => ({type: 'UNSTAR_ITEM', id})
 export const upVoteItem = id => ({type: 'UP_VOTE_ITEM', id})
 
 export const downVoteItem = id => ({type: 'DOWN_VOTE_ITEM', id})
+
+export const setItemVisited = id => ({type: 'SET_ITEM_VISITED', id})
