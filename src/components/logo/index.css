@@ -1,10 +1,19 @@
 .Logo {
-  color: #f558bf;
   cursor: pointer;
-  font-family: 'Cairo', sans-serif;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.Logo-text {
+  color: #333;
+  font-family: 'Exo 2', sans-serif;
   font-size: 28px;
-  font-weight: 200;
-  letter-spacing: 3px;
+  font-weight: 500;
+  letter-spacing: 1px;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.Logo-media {
+  margin-right: 10px;
 }

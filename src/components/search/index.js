@@ -37,7 +37,7 @@ const Search = ({dataSource, onNewRequest}) => (
       fullWidth={true}
       menuCloseDelay={0}
       filter={AutoComplete.fuzzyFilter}
-      underlineFocusStyle={{borderColor: '#f558bf'}}
+      underlineFocusStyle={{borderColor: '#1f5acc'}}
       onNewRequest={onNewRequest}
     />
   </div>
