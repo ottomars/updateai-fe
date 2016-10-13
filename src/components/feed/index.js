@@ -100,24 +100,28 @@ const Feed = ({
 }) => (
   <div className='Feed'>
     <div className='Feed-top'>
-      <p className='Feed-title'>{feed.title}</p>
-      <div className='Feed-actions'>
-        <FeedActions
-          sorting={feed.sorting}
-          onMoveLeftClick={moveFeedLeft}
-          onMoveRightClick={moveFeedRight}
-          onDeselectClick={deselectFeed}
-          onSortClick={setFeedSorting}
-        />
+      <div className='Feed-topInner'>
+        <p className='Feed-title'>{feed.title}</p>
+        <div className='Feed-actions'>
+          <FeedActions
+            sorting={feed.sorting}
+            onMoveLeftClick={moveFeedLeft}
+            onMoveRightClick={moveFeedRight}
+            onDeselectClick={deselectFeed}
+            onSortClick={setFeedSorting}
+          />
+        </div>
       </div>
     </div>
-    {items.map(item => (
-      <Item
-        key={item.id}
-        {...item}
-        isMyFeed={feed.isMyFeed}
-      />
-    ))}
+    <div className="Feed-items">
+      {items.map(item => (
+        <Item
+          key={item.id}
+          {...item}
+          isMyFeed={feed.isMyFeed}
+        />
+      ))}
+    </div>
     {items.length === 0 && (<p className='Feed-noResults'>Empty</p>)}
     {numPages > 1 && (<FeedPages numPages={numPages} page={feed.page} onPageButtonClick={setFeedPage}/>)}
   </div>
