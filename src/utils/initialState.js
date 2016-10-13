@@ -74,7 +74,8 @@ feedsArray.forEach(feed => {
       hostname: parse(item.uri).hostname.replace(/^www\./g, ''),
       visited: false,
       parentFeedTag: feed.title.replace(/\W+/g, ''),
-      voted: false,
+      upVoted: false,
+      downVoted: false,
       origUpvotes: item.upvotes
     }
   })

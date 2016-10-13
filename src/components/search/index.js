@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch) => ({
 const Search = ({dataSource, onNewRequest}) => (
   <div className='Search'>
     <div className='Search-icon'>
-      <SearchIcon color='#ccc' />
+      <SearchIcon color='#999' />
     </div>
     <AutoComplete
       hintText='Search feeds'

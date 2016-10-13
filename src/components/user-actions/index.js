@@ -58,7 +58,7 @@ class UserActions extends Component {
           iconStyle={{width: 36, height: 36}}
           style={{width: 36, height: 36, padding: 0}}
         >
-          <AccountCircleIcon color='#ccc'/>
+          <AccountCircleIcon color='#999'/>
         </IconButton>
         <Popover
           open={this.state.open}

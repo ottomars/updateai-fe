@@ -33,7 +33,8 @@ export default (state = {}, action = {}) => {
           [id]: {
             ...state[id],
             upvotes: origUpvotes + 1,
-            voted: true
+            upVoted: true,
+            downVoted: false
           }
         }
       }
@@ -46,7 +47,8 @@ export default (state = {}, action = {}) => {
           [id]: {
             ...state[id],
             upvotes: origUpvotes - 1,
-            voted: true
+            upVoted: false,
+            downVoted: true
           }
         }
       }
