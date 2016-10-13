@@ -1,5 +1,13 @@
 import {basename} from 'path'
-import {DAY_SORTING, NOW} from '../constants'
+import {
+  LIVE_SORTING,
+  DAY_SORTING,
+  WEEK_SORTING,
+  MONTH_SORTING,
+  YEAR_SORTING,
+  ALL_TIME_SORTING,
+  NOW
+} from '../constants'
 import {live, selected, active} from '../../data'
 import {normalize, Schema, arrayOf} from 'normalizr'
 import {parse} from 'url'
@@ -7,6 +15,7 @@ import guid from './guid'
 import moment from 'moment'
 
 const now = NOW()
+const availableSorting = [LIVE_SORTING, DAY_SORTING, WEEK_SORTING, MONTH_SORTING, YEAR_SORTING, ALL_TIME_SORTING]
 const mods = require.context('../../data', false, /^(?!.*index\.json$).*\.json$/)
 
 /**
@@ -32,7 +41,7 @@ const feedsArray = mods.keys()
   .map(feed => ({
     ...feed,
     page: 0,
-    sorting: DAY_SORTING
+    sorting: availableSorting.includes(feed.sorting) ? feed.sorting : DAY_SORTING
   }))
 
 const myFeed = {
