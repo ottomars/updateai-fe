@@ -1,16 +1,16 @@
 .Footer {
-  border-top: 1px solid #1f5acc;
   height: 50px;
   width: 100%;
 }
 
 .Footer-inner {
+  border-top: 1px solid #1f5acc;
   align-items: center;
   display: flex;
   height: 100%;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1210px;
+  max-width: 1190px;
 }
 
 .Footer-item {
@@ -19,9 +19,5 @@
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  margin: 0 30px;
-}
-
-.Footer-item a {
-  color: #999;
+  margin: 0 50px;
 }

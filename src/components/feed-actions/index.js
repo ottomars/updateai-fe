@@ -84,7 +84,7 @@ class FeedActions extends Component {
           iconStyle={{width: 36, height: 36}}
           style={{width: 36, height: 36, padding: 0}}
         >
-          <MoreHorizIcon color='#1f5acc'/>
+          <MoreHorizIcon color='#999'/>
         </IconButton>
         <Popover
           open={this.state.open}
