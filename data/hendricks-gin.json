@@ -8,8 +8,8 @@
 		"upvotes": 1,
 		"uri": "http://www.thedrum.com/news/2016/10/04/hendrick-s-gin-has-grown-new-cucumber-variant-specifically-australian-drinkers",
 		"image": "http://media-assets-01.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-116020-hendricks_greenhouse_bt--2x1--940.jpg",
-		"comments": []
-	}, 
+		"comments": 27
+	},
   {
 		"text": "Hendrick’s brings ‘virtual bartender’ to hotel",
 		"createdAt": "2016-10-03T09:00:00",
@@ -17,16 +17,16 @@
 		"upvotes": 0,
 		"uri": "http://www.thespiritsbusiness.com/2016/10/hendricks-brings-virtual-in-room-bartender-to-hotel/",
 		"image": "http://www.thespiritsbusiness.com/content/http://www.thespiritsbusiness.com/media/2016/10/hendricks.jpg",
-		"comments": []
-	}, 
+		"comments": 0
+	},
   {
 		"text": "Watch: Hendrick's gin bus offers a new kind of commute",
 		"createdAt": "2016-10-03T09:00:00",
-		"starred": false, 
+		"starred": false,
 		"upvotes": 0,
 		"uri": "http://www.campaignlive.co.uk/article/watch-hendricks-gin-bus-offers-new-kind-commute/1403060",
 		"image": "http://media-assets-05.thedrum.com/cache/images/thedrum-prod/s3-news-tmp-85019-hendricks_bus_london-53--2x1--940.jpg",
-		"comments": []
+		"comments": 0
 	},
   {
 		"text": "William Grant ‘can’t be complacent’ about Hendrick’s",
@@ -35,8 +35,8 @@
 		"upvotes": 0,
 		"uri": "http://www.thespiritsbusiness.com/2016/10/william-grant-cant-be-complacent-about-hendricks/",
 		"image": "http://www.thespiritsbusiness.com/content/http://www.thespiritsbusiness.com/media/2016/06/William-Grant-Ed-Cottrell.jpg",
-		"comments": []
-	}, 
+		"comments": 0
+	},
   {
 		"text": "We thank all those who valiantly entered our #TinyTales Contest. View all winning tales here http://bit.ly/2ax2inO ",
 		"createdAt": "2016-10-03T09:00:00",
@@ -44,8 +44,8 @@
 		"upvotes": 0,
 		"uri": "https://twitter.com/HendricksGin/status/779020040779825153",
 		"image": "https://www.blackappleart.com/wp-content/uploads/2013/09/Hendricks-Gin-for-Ladies-sm.jpg",
-		"comments": []
-	}, 
+		"comments": 0
+	},
    {
 		"text": "Record profits for Glenfiddich distillers William Grant and Sons",
 		"createdAt": "2016-10-03T09:00:00",
@@ -53,7 +53,7 @@
 		"upvotes": 0,
 		"uri": "https://www.pressandjournal.co.uk/fp/business/north-of-scotland/1039535/record-profits-for-glenfiddich-distillers-william-grant-and-sons/",
 		"image": "https://i2.wp.com/www.pressandjournal.co.uk/wp-content/uploads/sites/2/2016/09/Simon-Hunt-2-e1475001831400.jpg?resize=660%2C496&ssl=1",
-		"comments": []
+		"comments": 0
 	},
    {
 		"text": "Open from today till Saturday, make sure you go check out the @HendricksGin popup, The 'Institute of Dreams' http://ow.ly/hrnn304Cgh7 ",
@@ -62,8 +62,8 @@
 		"upvotes": 0,
 		"uri": "https://twitter.com/DrinkUpLDN/status/784000984615911424",
 		"image": "",
-		"comments": []
-	}, 
+		"comments": 0
+	},
    {
 		"text": "Hendrick's Gin Announces Whimsical Takeover Of National Cucumber Day",
 		"createdAt": "2016-09-03T09:00:00",
@@ -71,7 +71,7 @@
 		"upvotes": 0,
 		"uri": "http://www.prnewswire.com/news-releases/hendricks-gin-announces-whimsical-takeover-of-national-cucumber-day-300260771.html",
 		"image": "http://static.tumblr.com/c0c53c1a6975e5a5349f59f4139b60b0/tgxokej/3d9moeazw/tumblr_static_tumbrheaderrd1_b.jpg",
-		"comments": []
+		"comments": 0
 	},
     {
 		"text": "How Hendrick’s Gin is using social insight to craft experiential activity",
@@ -80,7 +80,7 @@
 		"upvotes": 0,
 		"uri": "http://www.thedrum.com/news/2016/07/31/how-hendrick-s-gin-using-social-insight-craft-experiential-activity",
 		"image": "",
-		"comments": []
+		"comments": 0
 	}
   ]
 }

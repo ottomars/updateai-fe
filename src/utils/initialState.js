@@ -76,7 +76,8 @@ feedsArray.forEach(feed => {
       parentFeedTag: feed.title.replace(/\W+/g, ''),
       upVoted: false,
       downVoted: false,
-      origUpvotes: item.upvotes
+      origUpvotes: item.upvotes,
+      commentsOpen: false
     }
   })
 })

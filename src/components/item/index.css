@@ -40,7 +40,6 @@
 
 .Item-createdAtAndHostName {
   color: #999;
-  flex-grow: 1;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -64,7 +63,7 @@
   content: '#';
 }
 
-.Item-bottom {
+.Item-actions {
   align-content: center;
   display: flex;
   justify-content: space-between;
@@ -74,17 +73,16 @@
 .Item-upvotes {
   display: flex;
   align-items: center;
-  width: 80px;
 }
 
 .Item-upvotesValue {
   color: #999;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1;
   text-align: center;
-  width: 25px;
+  width: 23px;
 }
 
 .Item--voted .Item-upvotesValue {
@@ -94,21 +92,69 @@
 .Item-share {
   display: flex;
   align-items: center;
-  width: 80px;
-  padding-left: 10px;
 }
 
 .Item-shareText {
   color: #999;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
-.Item-star {
-  width: 80px;
+.Item-commentsButton {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+}
+
+.Item-commentsButtonText {
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1;
+  margin-left: 5px;
+  flex-shrink: 0;
+}
+
+.Item-comments {
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+}
+
+.Item-comments.is-open {
+  display: block;
+}
+
+.Item-comment {
+  opacity: 0.8;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.Item-commentUser {
+  color: #1f5acc;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.Item-loadMoreComments {
+  opacity: 0.8;
+  color: #999;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-top: 5px;
+  text-align: center;
 }

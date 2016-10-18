@@ -12,10 +12,10 @@ const PageButton = ({pageNum, selected, onPageButtonClick}) => {
         e.preventDefault()
         onPageButtonClick(pageNum)
       }}
-      iconStyle={{width: 18, height: 18}}
-      style={{width: 18, height: 18, padding: 0}}
+      iconStyle={{width: 16, height: 16}}
+      style={{width: 16, height: 16, padding: 0}}
     >
-      <Icon hoverColor='#f558bf' color='#1f5acc'/>
+      <Icon hoverColor='#999' color='#333'/>
     </IconButton>
   )
 }

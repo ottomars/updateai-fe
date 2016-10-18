@@ -63,6 +63,28 @@ export default (state = {}, action = {}) => {
           }
         }
       }
+    case 'OPEN_ITEM_COMMENTS':
+      {
+        const {id} = action
+        return {
+          ...state,
+          [id]: {
+            ...state[id],
+            commentsOpen: true
+          }
+        }
+      }
+    case 'CLOSE_ITEM_COMMENTS':
+      {
+        const {id} = action
+        return {
+          ...state,
+          [id]: {
+            ...state[id],
+            commentsOpen: false
+          }
+        }
+      }
     default: return state
   }
 }
@@ -82,3 +104,15 @@ export const upVoteItem = id => ({type: 'UP_VOTE_ITEM', id})
 export const downVoteItem = id => ({type: 'DOWN_VOTE_ITEM', id})
 
 export const setItemVisited = id => ({type: 'SET_ITEM_VISITED', id})
+
+export const openItemComments = id => ({type: 'OPEN_ITEM_COMMENTS', id})
+
+export const closeItemComments = id => ({type: 'CLOSE_ITEM_COMMENTS', id})
+
+export const toggleItemCommentsOpen = id => (dispatch, getState) => {
+  if (getState().items[id].commentsOpen) {
+    dispatch(closeItemComments(id))
+  } else {
+    dispatch(openItemComments(id))
+  }
+}
